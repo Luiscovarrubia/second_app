@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/students">Home</a></li>
+    <li class="breadcrumb-item active"><a href="pages/landing">Lista</a></li>
+  </ol>
+
+
+<div class="jumbotron">
+  <h1 class="display-3">Student</h1>
+
+
+
+  <tbody>
+    <% @students.each do |student| %>
+
+    <div class="well">
+
+        <%= link_to 'Show', student, class:"btn btn-success"%>
+        <%= link_to 'Edit', edit_student_path(student), class:'btn btn-primary' %>
+        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-warning' %>
+
+        <%= student.name %>
+        <%= student.age %>
+        <%= student.email %>
+
+      </div>
+    <% end %>
+  </tbody>
+
+
+
+
+<%= link_to 'New Student', new_student_path %>

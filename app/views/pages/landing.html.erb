@@ -1,0 +1,31 @@
+
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/students">Home</a></li>
+    <li class="breadcrumb-item active">Lista</li>
+  </ol>
+
+<div class="jumbotron">
+  <h1 class="display-3">Student</h1>
+
+
+  <tbody>
+
+    <% @students.each do |student| %>
+
+    <div class="well">
+        <tbody>
+
+
+        <%= student.name %>
+        <%= student.age %>
+        <%= student.email %>
+
+    </div>
+
+    <% end %>
+  </tbody>
+
+  </div>
+
